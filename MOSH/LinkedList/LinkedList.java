@@ -121,7 +121,9 @@ public class LinkedList {
             first = next;
 
         }
+        last = first;
         this.first = previous;
+        last = null;
         System.out.println("++++++++++++++++=");
     }
 
