@@ -1,4 +1,4 @@
 public class A {
-    String a;
+    String a ;
     String b;
 }
