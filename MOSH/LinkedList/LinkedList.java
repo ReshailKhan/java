@@ -13,6 +13,7 @@ public class LinkedList {
     }
     private Node first;
     private Node last;
+    private int size = 0;
 
     public void addLast(int item){
         var node = new Node(item);
@@ -22,6 +23,7 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
+        size ++;
     }
 
     public void addFirst(int item){
@@ -32,6 +34,7 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+        size ++;
     }
 
     private boolean isEmpty(){
@@ -63,6 +66,7 @@ public class LinkedList {
         var second = first.next;
         first.next = null;
         first = second;
+        size --;
     }
 
     public void removeLast(){
@@ -75,6 +79,7 @@ public class LinkedList {
         var previous = getPreviousNode();
         last = previous;
         last.next = null;
+        size --;
     }
 
     private Node getPreviousNode(){
@@ -85,4 +90,39 @@ public class LinkedList {
         }
         return null;
     }
+
+    public int size(){
+        return size;
+    }
+
+    public int[] toArray (){
+        int [] array = new int[size()];
+        var current = first;
+        for (int i = 0; i < size;i++){
+            array[i] = current.value;
+            current = current.next;
+        }
+        return array;
+    }
+    public void reverseLinkList(){
+        if(isEmpty())
+            throw new NoSuchElementException();
+        if (first == last){
+            return;
+        }
+        var first = this.first;
+        Node next ;
+        Node previous = null;
+
+        while (first != null){
+            next = first.next;
+            first.next = previous;
+            previous = first;
+            first = next;
+
+        }
+        this.first = previous;
+        System.out.println("++++++++++++++++=");
+    }
+
 }
