@@ -121,10 +121,25 @@ public class LinkedList {
             first = next;
 
         }
-        last = first;
         this.first = previous;
         last = null;
-        System.out.println("++++++++++++++++=");
     }
 
+    public int getKthNodeFromTheEnd(int node){
+        if (node > size){
+            System.out.println("Value of K is greater the size of LinkedList");;
+            return node;
+        }
+        boolean condition = true;
+        var first = this.first;
+        var second = this.first;
+        for (int i = 0; i < node-1; i++){
+            second = second.next;
+        }
+        while (second != last){
+            first = first.next;
+            second = second.next;
+        }
+        return first.value;
+    }
 }
