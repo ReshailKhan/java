@@ -14,5 +14,6 @@ public class Main {
         array[3] = 15;
 
         System.out.println("twoSum: " + Arrays.toString(tasks.twoSum(array,9)));
+        System.out.println("twoSumWithOutComplexity: " + Arrays.toString(tasks.twoSumWithOutComplexity(array,9)));
     }
 }
