@@ -9,11 +9,11 @@ public class Main {
         Tasks tasks = new Tasks();
         int[] array = new int[5];
         array[0] = 2;
-        array[1] = 11;
-        array[2] = 7;
-        array[3] = 15;
+        array[1] = 5;
+        array[2] = 5;
+        array[3] = 11;
 
-        System.out.println("twoSum: " + Arrays.toString(tasks.twoSum(array,9)));
+        System.out.println("twoSum: " + Arrays.toString(tasks.twoSum(array,10)));
         System.out.println("twoSumWithOutComplexity: " + Arrays.toString(tasks.twoSumWithOutComplexity(array,9)));
     }
 }
