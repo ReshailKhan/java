@@ -28,4 +28,24 @@ public class Tasks {
         }
         return new int[] {};
     }
+
+    public int consecutiveVowels(String str) {
+        char[] chars = str.toCharArray();
+        int count  = 0;
+        int res = 0;
+
+        for (int i = 0; i < chars.length; i++){
+            if (isVowel(chars[i]))
+                count++;
+            else
+                res = Math.max(count,res);
+                count = 0;
+        }
+        return Math.max(count,res);
+    }
+
+    private boolean isVowel(char cha){
+        return  (cha == 'a' || cha == 'e' || cha == 'i'
+                || cha == 'o' || cha == 'u');
+    }
 }
