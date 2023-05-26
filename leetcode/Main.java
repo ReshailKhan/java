@@ -16,5 +16,6 @@ public class Main {
         System.out.println("twoSum: " + Arrays.toString(tasks.twoSum(array,10)));
         System.out.println("twoSumWithOutComplexity: " + Arrays.toString(tasks.twoSumWithOutComplexity(array,9)));
         System.out.println("consecutiveVowels: " + tasks.consecutiveVowels("aaboaeissstraeiou"));
+        System.out.println("lengthOfLongestSubstring: " + tasks.lengthOfLongestSubstring("abcabcbb"));
     }
 }

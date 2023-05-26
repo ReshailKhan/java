@@ -1,9 +1,6 @@
 package leetcode;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 public class Tasks {
     public int[] twoSum(int[] nums, int target) {
@@ -37,9 +34,10 @@ public class Tasks {
         for (int i = 0; i < chars.length; i++){
             if (isVowel(chars[i]))
                 count++;
-            else
-                res = Math.max(count,res);
+            else {
+                res = Math.max(count, res);
                 count = 0;
+            }
         }
         return Math.max(count,res);
     }
@@ -47,5 +45,27 @@ public class Tasks {
     private boolean isVowel(char cha){
         return  (cha == 'a' || cha == 'e' || cha == 'i'
                 || cha == 'o' || cha == 'u');
+    }
+
+    public int lengthOfLongestSubstring(String s) {
+        char[] chars = s.toCharArray();
+        int count  = 0;
+        int res = 0;
+        int i = -1;
+        Set<Character> set = new HashSet<> ();
+        for (int j = 0; j < chars.length; j++){
+            if (!set.contains(chars[j])){
+                set.add(chars[j]);
+                count++;
+            }
+            else {
+                set = new HashSet<> ();
+                res = Math.max(count, res);
+                count = 0;
+                i++;
+                j = i;
+            }
+        }
+        return Math.max(count,res);
     }
 }
