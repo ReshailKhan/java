@@ -68,4 +68,27 @@ public class Tasks {
         }
         return Math.max(count,res);
     }
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        double ans = 0;
+        int num1Length = nums1.length;
+        int num2Length = nums2.length;
+        int length = num1Length+num2Length;
+        int div = length%2;
+        int medianIndex = length/2;
+        int[] totalNumber = new int[length];
+        for (int i = 0;i<length;i++){
+            if(i<num1Length){
+                totalNumber[i] = nums1[i];
+            }else {
+                totalNumber[i] = nums2[i-num1Length];
+            }
+        }
+        Arrays.sort(totalNumber);
+        if (div==0){
+            ans = (totalNumber[medianIndex-1]+totalNumber[medianIndex])/2.0;
+        }else {
+            ans = totalNumber[medianIndex];
+        }
+        return ans;
+    }
 }
