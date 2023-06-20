@@ -91,4 +91,61 @@ public class Tasks {
         }
         return ans;
     }
+
+    public String longestPalindrome(String s) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(s);
+        sb.reverse();
+        if(s.length()<2 || s.equals(sb.toString()))
+            return s;
+        char[] chars = s.toCharArray();
+        int i = -1;
+        String str = "";
+        String longestSubString = "";
+        for (int j = 0; j < chars.length; j++){
+            sb = new StringBuilder();
+            str = str+chars[j];
+            // append a string into StringBuilder
+            sb.append(str);
+            sb.reverse();
+            if(str.equals(sb.toString())){
+                if(longestSubString.isEmpty()){
+                    longestSubString = str;
+                }
+                if(str.length() > longestSubString.length()){
+                    longestSubString = str;
+                }
+            }
+            if(j==chars.length-1){
+                i++;
+                j = i;
+                str = "";
+            }
+        }
+        return longestSubString;
+    }
+
+    public int findNonRepeatedNumber(int[] array){
+        Map<Integer,Integer> counter = new HashMap<>();
+        int key = 0;
+        for (int i = 0; i < array.length;i++){
+            if (!counter.containsKey(array[i]))
+                counter.put(array[i],1);
+            else
+                counter.put(array[i],counter.get(array[i])+1);
+        }
+        ArrayList<Integer> arrayList =  new ArrayList<>(counter.keySet());
+
+        System.out.println(arrayList);
+        for (int j = 0; j < arrayList.size();j++
+             ) {
+            if(counter.get(arrayList.get(j))<2){
+
+            }
+
+        }
+        System.out.println(counter);
+        return 0;
+    }
 }
+
