@@ -7,6 +7,9 @@ public class UpCasting {
             animal.sound();
             //dog.sound();
             // Calls Dog's overridden sound() method
+//        int a = 10.0;
+//        String temp = Integer.toString(a);
+//        System.out.println(temp);
     }
 
 }
