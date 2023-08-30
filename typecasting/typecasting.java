@@ -7,6 +7,7 @@ public class typecasting {
         double myDouble = myInt; // Automatic casting: int to double
         Integer integer = myInt;
         Double doub = 0.0;
+        //Double doub = (Double) myInt;
 
         System.out.println(myInt);      // Outputs 9
         System.out.println(myDouble);   // Outputs 9.0
