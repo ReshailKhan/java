@@ -13,7 +13,7 @@ interface Sayable extends Doable{
         System.out.println("Do it now Sayable "+string);
     }
 }
-public class functionalinterface implements Sayable{
+public class  functionalinterface implements Sayable{
     public void say(String msg){
         System.out.println(msg+ " >>>>>>>>>>>>");
     }
