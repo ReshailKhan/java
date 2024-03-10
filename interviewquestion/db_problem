@@ -1,0 +1,42 @@
+Three main entities teacher, course and student
+Each teacher can teach one or more courses
+Each student can subscribe in one or more courses
+
+ 
+
+Questions:
+
+ 
+
+State in words on notepad the entity relationships that accurately describes this database.
+
+ 
+
+Implement a query to get a list of all students and how many courses each student is enrolled in.
+
+ 
+
+Implement a query that shows the number of full-time and part-time students A full-time student is enrolled in at least 4 courses. A part-time student is enrolled in at least 1 course, but no more than 3
+
+
+
+teacher
+teacher_id
+teacher_name
+
+course_by_teacher
+course_by_teacher_id
+course_id
+teacher_id
+
+course
+course_id
+Course_name
+
+student
+student_id
+student_name
+course_id
+
+select  from 
+

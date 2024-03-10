@@ -1,0 +1,99 @@
+Company
+Manager
+Employee
+Accoutant
+Account_Number
+
+Company
+Employee 
+salary()
+Accoutant extend Employee
+Manager extend Employee
+AccountNumber
+
+
+pubsub
+DesignPattern
+cando
+
+
+aaabbc 6
+
+
+
+====================================================================================
+
+
+import java.util.*; 
+import java.lang.*;
+import java.io.*;
+import java.lang.Math;
+
+ 
+
+public class Main {
+    public static int frequencyProduct(int N,String S) {
+
+        //this is default OUTPUT. You can change it.
+        int result=-404;
+
+        //write your Logic here:
+        if(N==S.s){
+            Map<Integer,String> map = new HashMap<>();
+            for(int i = 0; i <= S.lenght;i++){
+                if(map.contains(S.charAt[i]+"")){
+                    map.put(map.get(S.charAt[i]+"")+1,S.charAt[i]+"");
+                }else{
+                    map.put(1,S.charAt[i]+"");
+                }
+            }
+            ArrayList<Integer> array = new ArrayList<>();
+            array = map.getKeys();
+            int res = 1;
+        }       ())array
+                res = res * array[i];                
+
+            result = res;   
+        return result;
+    }
+    public static void main(String[] args) {
+        // INPUT [uncomment & modify if required]
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt(); 
+        String S = sc.next();
+
+        // OUTPUT [uncomment & modify if required]
+        System.out.print(frequencyProduct(N,S));
+        sc.close();
+    }
+}
+
+------------------------------------------------------------------------------------------
+
+class Demo {
+    public static void main(String[] args) {
+        int x = 5, y = 10;
+        try {
+            y /= x;
+        } catch (Exception e) {
+            System.out.print("Error");
+        } finally {
+            System.out.print("Finally");
+        }
+    }
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+public class Test {
+    public static void main(String[] args) {
+        Student s0 = new Student();
+        Student s1 = new Student();
+        s0.marks(s1);
+    }
+}
+class Student {
+    public void marks(Student s1) {
+        System.out.println(this == s1);
+    }
+}
