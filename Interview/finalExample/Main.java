@@ -9,6 +9,7 @@ public class Main {
         firstClass firstClass = new firstClass();
         secondClass secondClass = new secondClass();
         secondClass.soutFinal();
-
+        finallyExample finallyEg = new finallyExample();
+        finallyEg.fnNumberChecker(null);
     }
 }
