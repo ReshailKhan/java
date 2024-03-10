@@ -1,5 +1,6 @@
-package Interview;
+package Interview.staticExample;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,11 @@ public class Interview {
         s0.marks(s1);
         System.out.println("frequencyProduct: "+frequencyProduct(6,"aaabbc"));
         System.out.println("frequencyProduct: "+frequencyProduct(6,"aaabb"));
+        System.out.println(Student.str);
+        System.out.println(Student.strStudent);
+
+
+        System.out.println(s0.studentMarks.studentMarks);
     }
 
     public static int frequencyProduct(int N,String S) {
@@ -45,5 +51,7 @@ public class Interview {
         }
         return result;
     }
+
+
 
 }
