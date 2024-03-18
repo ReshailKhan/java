@@ -11,7 +11,7 @@ import java.util.Map;
 public class main {
     public static void main(String[] args) {;
         String fileName = "file.json";
-        String filePath = "bhaitask/"+fileName;
+        String filePath = "bhaitask/file.json";
         try {
             String jsonString = new String(Files.readAllBytes(Paths.get(filePath)));
             jsonString = jsonString.substring(1,jsonString.length()-1);
